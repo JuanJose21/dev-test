@@ -93,11 +93,11 @@ function showSelect(){
 }
 
 
-$('.navbar-collapse a').click(function(e){               
+$('.anclaScroll').click(function(e){               
     e.preventDefault();
     var ancla = $(this).attr('href');
 
     $('body,html').stop(true,true).animate({                
-        scrollTop: $(ancla).offset().top;
+        scrollTop: $(ancla).offset().top
     },1000);
 });
