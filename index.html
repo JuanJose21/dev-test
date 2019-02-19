@@ -12,7 +12,7 @@
   </head>
   <body>
 
-    <div class="row containerTotal">
+    <div class="row containerTotal headerStart" id="headerStart">
       <!-- HEAD -->
       <div class="col-md-12 p-0 w-100">
         <nav class="navbar navbar-expand-md fixed-top">
@@ -23,19 +23,19 @@
           <div class="navbar-collapse collapse" id="navbarCollapse" style="">
               <ul class="navbar-nav ml-auto ">
               <li class="nav-item active mr-4">
-                  <a class="nav-link" href="#page-1">Page 1</a>
+                  <a class="nav-link" href="#pageOne">Page 1</a>
               </li>
               <li class="nav-item active mr-4">
-                  <a class="nav-link" href="#page-2">Page 2 </a>
+                  <a class="nav-link" href="#pageTwo">Page 2 </a>
               </li>
               <li class="nav-item active mr-4">
-                  <a class="nav-link" href="#page-3">Page 3 </a>
+                  <a class="nav-link" href="#pageThree">Page 3 </a>
               </li>
               <li class="nav-item active mr-4">
-                  <a class="nav-link botonTop text-dark text-center" href="#top">Top</a>
+                  <a class="nav-link botonTop text-dark text-center" href="#headerStart">Top</a>
               </li>
               <li class="nav-item active mr-4 ">
-                  <a class="nav-link botonBottom mr-5 text-center" href="#">Bottom </a>
+                  <a class="nav-link botonBottom mr-5 text-center" href="#pageBottom">Bottom </a>
               </li>
               </ul>
           </div>
@@ -60,7 +60,7 @@
     </div>
 
     <!-- PAGE 1 -->
-    <div class="pageOne">
+    <div class="pageOne" id="pageOne">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -176,7 +176,7 @@
     </div>
 
     <!-- PAGE 2 -->
-    <div class="pageTwo">
+    <div class="pageTwo" id="pageTwo">
       <div class="container">
         <div class="row">
           <div class="col-md-12 ">
@@ -200,7 +200,7 @@
     </div>
 
     <!-- PAGE 3 -->
-    <div class="pageThree">
+    <div class="pageThree" id="pageThree">
       <div class="container">
         <div class="row mb-4">
           <div class="col-md-12 ">
@@ -242,6 +242,20 @@
       </div>
     </div>
 
+    <!-- Page Bottom -->
+    <div class="pageBottom" id="pageBottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 ">
+            <h1 class="text-center titlePageBottom">THANK <b>YOU</b></h1>
+          </div>
+        </div>
+        
+        <div class="containerBottom">
+          <button class="mb-4 text-center buttonGoToBottom buttonGoToHeader"> Go to header</button>
+        </div>
+      </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
