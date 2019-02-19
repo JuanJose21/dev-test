@@ -2,6 +2,44 @@ $(document).ready(function(){
 
     getApi();
 
+    showSelect();
+
+});
+
+function validateSelect(){
+    var response;
+    var validateResponse = [];
+    var validateArray;
+    var valor;
+
+    $(".selectPageOne").each(function(){
+        valor = $(this).val();
+
+        if(valor == "YES"){
+            response = true;
+        }else{
+            response = false;
+        }
+
+        validateResponse.push(response);
+    });
+
+    validateArray = $.inArray(true, validateResponse);
+
+    if(validateArray == -1){
+        response = "FALSE";
+    }else{
+        response = "TRUE";
+    }
+
+    $(".consoleOutput").val("Question change: "+response);
+}
+
+/*
+* Detectar cambio del select
+*/
+$(".selectPageOne").change(function(){
+    validateSelect();
 });
 
 /*
@@ -31,7 +69,7 @@ function getApi(){
                     active = '';
                 }
 
-                $(".carousel-inner").append('<div class="carousel-item ' + active +' "><img class="d-block w-100" id="carousel' + contador + '" src=" ' + imagen + ' " alt="Slide' + contador + '"><div class="carousel-caption "><h5 class="title-slide" id="title' + contador + '"> ' + titulo + ' </h5><p class="text-slide" id=""> ' + texto + ' </p></div></div>"');
+                $(".carousel-inner").append('<div class="carousel-item ' + active +' "><img class="d-block img-fluid" id="carousel' + contador + '" src=" ' + imagen + ' " alt="Slide' + contador + '"><div class="carousel-caption "><h5 class="title-slide" id="title' + contador + '"> ' + titulo + ' </h5><p class="text-slide" id=""> ' + texto + ' </p></div></div>"');
                 
                 contador++;
             });
@@ -39,4 +77,17 @@ function getApi(){
         dataType: 'json'
     })//end ajax
     return false;
+}
+
+/*
+* Cargar los select
+*/
+function showSelect(){
+
+    $(".selectPageOne").html("");
+
+    $(".selectPageOne").each(function(){
+        $(this).append("<option value='YES'>YES</option>");
+        $(this).append("<option value='NO'>NO</option>");
+    });
 }
